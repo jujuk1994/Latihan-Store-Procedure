@@ -1,0 +1,41 @@
+﻿@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>UpdateEmployee</title>
+</head>
+<body>
+    @{
+        foreach (System.Data.DataRow dataRow in ViewBag.empData.Rows)
+        {
+            <form method="post">
+                Id
+                <input type="text" value="@dataRow["Id"]" name="Id" />
+                Name
+                <input type="text" value="@dataRow["Name"]" name="Name" />
+                Adrress
+                <input type="text" value="@dataRow["Adrress"]" name="Adrress" />
+                City
+                <input type="text" value="@dataRow["City"]" name="City" />
+                Pin Code
+                <input type="text" value="@dataRow["Pin_Code"]" name="Pin_Code" />
+                Designation
+                <input type="text" value="@dataRow["Designation"]" name="Designation" />
+                <input type="submit" value="submit" class="btn btn-primary" />
+        
+            </form>
+
+
+        }
+   
+}
+
+
+
+</body>
+</html>

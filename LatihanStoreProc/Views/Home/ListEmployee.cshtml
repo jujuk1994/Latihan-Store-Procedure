@@ -1,0 +1,75 @@
+﻿@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>ListEmployee</title>
+    <link href="~/bootstrap.min.css" rel="stylesheet" />
+    <script src="~/jquery-3.4.1.min.js"></script>
+</head>
+<body>
+    <div class="container">
+        <br />
+    <button type="button" class="btn btn-primary" id="btnAdd">add employee</button>
+        <br />
+        <div class="table-responsive">
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th>Name</th>
+                        <th>Adreess</th>
+                        <th>City</th>
+                        <th>Pin Code</th>
+                        <th>Nationality</th>
+                        <th>Action</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @{
+                        foreach (System.Data.DataRow dataRow in ViewBag.emp.Rows)
+                        {
+                            <tr>
+                                <td>@dataRow["Name"]</td>
+                                <td>@dataRow["Adrress"]</td>
+                                <td>@dataRow["City"]</td>
+                                <td>@dataRow["Pin_Code"]</td>
+                                <td>@dataRow["Designation"]</td>
+                                <td>
+                                    <a href="/Home/UpdateEmployee?id=@dataRow["Id"]">Update</a><br />
+                                    <a href="/Home/DeleteEmployee?id=@dataRow["Id"]">Delete</a>
+                                </td>
+                            </tr>
+                        }
+                    }
+                </tbody>
+
+            </table>
+        </div>
+    </div>
+    @{
+        if (TempData["msg"] != null)
+        {
+            <script>alert('@TempData["msg"]')</script>
+        }
+    }
+</body>
+</html>
+<script>
+    $('#btnAdd').click(function () {
+        debugger;
+        $.ajax({
+            type: 'get',
+            url: '/Home/AddEmployee',
+            success: function (mdl) {
+                debugger;
+                window.location.href = "/Home/AddEmployee"
+            }
+        })
+    })
+
+  
+</script>

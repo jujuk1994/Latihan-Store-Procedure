@@ -1,0 +1,5 @@
+D:\Bootcamp Xsis\LatihanStoreProc\LatihanStoreProc.dal\bin\Debug\LatihanStoreProc.dal.dll
+D:\Bootcamp Xsis\LatihanStoreProc\LatihanStoreProc.dal\bin\Debug\LatihanStoreProc.dal.pdb
+D:\Bootcamp Xsis\LatihanStoreProc\LatihanStoreProc.dal\obj\Debug\LatihanStoreProc.dal.csprojResolveAssemblyReference.cache
+D:\Bootcamp Xsis\LatihanStoreProc\LatihanStoreProc.dal\obj\Debug\LatihanStoreProc.dal.dll
+D:\Bootcamp Xsis\LatihanStoreProc\LatihanStoreProc.dal\obj\Debug\LatihanStoreProc.dal.pdb
